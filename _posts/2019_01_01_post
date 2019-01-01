@@ -1,0 +1,22 @@
+#Python 크롤링
+
+- 파이썬 크롤링 library
+1. beautiful soup
+2. Selenium
+
+- 페이지네이션
+import urllib.request
+from bs4 import BeautifulSoup
+
+url = "http://sports.donga.com/Enter?p=1&c=02"
+req = urllib.request.Request(url)
+sourcecode = urllib.request.urlopen(url).read()
+soup = BeautifulSoup(sourcecode, "html.parser")
+
+print(soup)
+
+- href 페이지 수집
+find("a")["href"]
+
+
+
